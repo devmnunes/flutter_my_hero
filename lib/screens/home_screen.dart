@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 7,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:() {
+        onPressed: () {
           print("O BOTÃO FOI CLICADO");
         },
         backgroundColor: const Color.fromARGB(255, 36, 128, 39),
@@ -53,19 +53,23 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                  "Por ${character.player}, criado em ${character.createdAt.toString().substring(0, 10)}.",
-                   style: TextStyle(fontStyle: FontStyle.italic),
-               ),
+                "Por ${character.player}, criado em ${character.createdAt.toString().substring(0, 10)}.",
+                style: TextStyle(fontStyle: FontStyle.italic),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Divider(),
               ),
               ListItem(title: "Nivel:", value: character.level.toString()),
-              ListItem(title: "Vida:", value: "${character.hitPoints}/${character.level*11}"
-              ),
-              ListItem(title: "Mana", value: "${character.manaPoints}/${character.level*2}"),
-              ListItem(title: "Vivo?", 
-              value: (character.isAlive)? "❤️" : "💀",
+              ListItem(
+                  title: "Vida:",
+                  value: "${character.hitPoints}/${character.level * 11}"),
+              ListItem(
+                  title: "Mana",
+                  value: "${character.manaPoints}/${character.level * 2}"),
+              ListItem(
+                title: "Vivo?",
+                value: (character.isAlive) ? "❤️" : "💀",
               ),
             ],
           ),
