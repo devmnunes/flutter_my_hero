@@ -25,8 +25,8 @@ class HomeScreen extends StatelessWidget {
         elevation: 7,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('O BOTÃO FOI CLICADO');
+        onPressed:() {
+          print("O BOTÃO FOI CLICADO");
         },
         backgroundColor: const Color.fromARGB(255, 36, 128, 39),
         child: Icon(
