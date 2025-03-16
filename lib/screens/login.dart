@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
   const Login ({super.key});
@@ -19,9 +20,27 @@ class Login extends StatelessWidget {
                   child: Image.asset('lib/image/logo.png'),
                 )
               ),
+              Text(
+                "Entre na sua conta Street Fighter",
+                style: GoogleFonts.tektur(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(            
+                  width: 550,
+                  height: 300,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(40, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(8.5)
+                  ),
+                ),
+              )
            ],),
            ) ,
-           ),
+        ),
       ),
     );
   }
