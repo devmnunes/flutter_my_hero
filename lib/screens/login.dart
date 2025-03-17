@@ -9,6 +9,7 @@ class Login extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           color: const Color.fromARGB(255, 36, 128, 39),
             child: Center(
@@ -21,7 +22,7 @@ class Login extends StatelessWidget {
                 )
               ),
               Text(
-                "Entre na sua conta Street Fighter",
+                "Entre na sua conta Street Fighter.",
                 style: GoogleFonts.tektur(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -35,6 +36,21 @@ class Login extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(40, 255, 255, 255),
                     borderRadius: BorderRadius.circular(8.5)
+                  ),
+                  child: Column(
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Email",
+                          hintStyle: TextStyle(color: Colors.white),
+                          icon: Icon(
+                            Icons.email_outlined,
+                             color: Colors.white,
+                             ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               )
