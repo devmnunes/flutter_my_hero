@@ -28,11 +28,9 @@ class Login extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: Container(            
-                  width: 550,
-                  height: 300,
+                  SizedBox( height: 20,),
+                  Container(
+                  width: 180,
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(40, 255, 255, 255),
                     borderRadius: BorderRadius.circular(8.5)
@@ -47,15 +45,52 @@ class Login extends StatelessWidget {
                           icon: Icon(
                             Icons.email_outlined,
                              color: Colors.white,
-                             ),
+                             ),    
                         ),
-                      )
+                      ),
+                      SizedBox(height: 20,),
+
+                      Row(
+                        children: [
+                          Flexible(
+                            child: TextField(
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Palavra-passe",
+                                hintStyle: TextStyle(color: Colors.white),
+                                icon: Icon(
+                                  Icons.key_outlined,
+                                   color: Colors.white,
+                                ),    
+                              ),
+                            ),
+                          ),
+                          Icon(
+                            Icons.visibility_outlined,
+                             color: Colors.white,
+                          )
+                        ],
+                      ),
                     ],
                   ),
                 ),
-              )
-           ],),
-           ) ,
+              ),
+              Row(
+                children: [
+                Text('Esqueceu a senha?',
+                 style: TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  width: 200,
+                  height: 80,
+                  color: Colors.blue,
+                )
+                
+           ],
+           ),
+          ),
         ),
       ),
     );
